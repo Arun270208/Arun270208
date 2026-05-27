@@ -1,0 +1,343 @@
+/* Base Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e4ecef;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding-top: 90px; /* Gives top space for fixed navigation bar */
+}
+
+/* ================= PRESERVED & UPDATED FIXED NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(228, 236, 239, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1e3a45;
+    text-decoration: none;
+    font-size: 1.15rem;
+}
+
+.logo-accent {
+    color: #165b65; /* Matches your primary button theme color */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #4a5a60;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #165b65;
+}
+
+/* Real-App Auth Buttons */
+.nav-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid #165b65;
+    color: #165b65;
+    padding: 6px 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background-color: rgba(22, 91, 101, 0.05);
+}
+
+.btn-signup {
+    background-color: #165b65;
+    color: white;
+    border: none;
+    padding: 7px 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #0f444c;
+}
+
+.badge {
+    background: #cad8dc;
+    color: #1e3a45;
+    font-size: 0.75rem;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+
+/* Page Scroll Wrapper Container */
+.feed-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Balanced spacing gap between article sections */
+}
+
+/* Standalone Article Container Card */
+.content-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+/* Image Wrapper Layout */
+.card-image-box {
+    width: 100%;
+    height: auto;
+    background: #eef2f3;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= NEW INTERACTIVE ENGAGEMENT BAR ================= */
+.card-engagement-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #f8fafb;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.engage-btn {
+    background: transparent;
+    border: none;
+    color: #5c6b73;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.engage-btn svg {
+    transition: transform 0.2s ease;
+}
+
+/* Smooth visual feedbacks on hover actions */
+.like-btn:hover {
+    color: #ff4757;
+    background-color: rgba(255, 71, 87, 0.08);
+}
+
+.comment-btn:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.08);
+}
+
+.save-btn:hover {
+    color: #dfb667;
+    background-color: rgba(223, 182, 103, 0.08);
+}
+
+.engage-btn:hover svg {
+    transform: scale(1.12);
+}
+
+/* Typography Content Padding Elements */
+.card-body {
+    padding: 35px;
+}
+
+/* ================= NEW PREMIUM TYPOGRAPHY UPDATES ================= */
+.card-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #165b65;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.card-title-premium {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+}
+
+/* Highlight title when card context gets hovered */
+.content-card:hover .card-title-premium {
+    color: #165b65;
+}
+
+.intro-text {
+    font-size: 15px;
+    color: #4a5a60;
+    margin-bottom: 25px;
+}
+
+/* Interactive Grey Card Content Panel */
+.interactive-panel {
+    background-color: #cad8dc;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.panel-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e3a45;
+    margin-bottom: 12px;
+}
+
+/* State Management Hidden Modifiers */
+.hidden {
+    display: none !important;
+}
+
+.more-content {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+/* Card Actions Control Layout Elements */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #165b65;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.btn-primary:hover { background-color: #0f444c; }
+
+.btn-secondary {
+    background-color: #bfa36f;
+    color: white;
+    padding: 12px 30px;
+}
+
+.btn-secondary:hover { background-color: #ab905f; }
+
+/* Real-App Footer Element */
+.main-footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: #d1dee2;
+    color: #5c6b73;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.main-footer a {
+    color: #165b65;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Interactive Modal Overlays Configuration */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(5px);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background: white; width: 90%; max-width: 580px; padding: 35px; border-radius: 12px; position: relative;
+    border-left: 6px solid #1ba39c;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.modal-title { font-size: 22px; font-weight: 700; margin-bottom: 15px; }
+.code-box { background-color: #f0f4f5; padding: 18px; border-radius: 8px; border: 1px solid #d1dee2; margin-bottom: 25px; }
+.code-box code { font-family: 'JetBrains Mono', monospace; font-size: 13.5px; color: #233942; word-break: break-all; }
+.modal-actions { display: flex; gap: 15px; }
+.btn-teal { background-color: #1ba39c; color: white; }
+.btn-teal:hover { background-color: #14807a; }
+.btn-gold { background-color: #dfb667; color: white; }
+
+.close-btn { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 28px; color: #999; cursor: pointer; }
+.close-btn:hover { color: #333; }
